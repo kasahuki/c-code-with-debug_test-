@@ -1,0 +1,406 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,300&display=swap");
+/* @import 是一个 CSS 规则，用于将外部样式表或字体导入当前样式表。这使得你可以在一个 CSS 文件中使用来自其他文件或资源的样式。 */
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  transition: 0.2s linear;
+  text-transform: capitalize;
+  /* text-transform: uppercase; */
+  /* text-transform: lowercase; */
+  /* 全转大写 */
+  /* 过渡持续0.2s */
+}
+/* 祖宗标签 */
+
+html
+{
+  font-size: 62.5%;
+  overflow-x: hidden;
+  /* 有什么用，对于当前项目 */
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+  /* 滑动留出空间 */
+  /* 滑动行为 */
+}
+i {
+  color: green;
+}
+/* 每个部件 */
+section
+{
+  padding: 5rem 9%;
+}
+
+.home
+{
+  padding: 0;
+}/* 避免section padding影响！！*/
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 2rem 9%;
+  z-index: 1000;
+  /* 层叠优先级 */
+ 
+  align-items: center;
+  transition: .5s;
+}
+
+.header .logo {
+  margin-right: auto;
+  /* 为什么 */
+  /* 按照flex盒子剩余空间进行有效利用！ */
+
+  font-size: 2.5rem;
+  color: black;
+  font-weight: bolder;
+  /* 明显的.粗体的 */
+}
+
+
+.navbar a
+{
+  margin-left: 1.2rem;
+  font-size: 1.7rem;
+  color: black;
+}
+/* 以上为header区域 */
+.home .box {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-size: cover !important;
+  background-position: center !important;
+  justify-content: flex-end;
+  padding: 2rem 9%;
+}
+
+.home .box .content
+{
+  width: 50rem;
+  padding-left:10rem ;
+}
+
+
+.home .content {
+  width: 50rem;
+}
+.home .content span {
+  font-size: 4rem;
+  color: black;
+}
+.home .content h3 {
+  font-size: 6rem;
+  color: green;
+  padding-top: 0.5rem;
+  text-transform: uppercase;
+}
+.home .content p {
+  line-height: 2;
+  color: black;
+  font-size: 1.5rem;
+  padding: 1rem 0;
+}
+/* 单独写类-->   因为涉及到复用，相当于一个类接口 */
+.btn
+{
+  display: inline-block;
+  margin-top: 1rem;
+  border: 0.2rem solid #000;
+  border-radius:20px ;
+  color: black;
+  font-size: 1.7rem;
+  padding: 1rem 3rem;
+}
+
+ .btn:hover
+{
+  background-color: black;
+  color: white;
+}
+/* 通用类 标题！ */
+.heading 
+{
+    font-size: 4rem;
+    text-align: center;
+    color: black;
+    font-weight: 700;
+    margin-bottom: 3rem;
+    
+}
+/* 通用类 标题！ */
+
+
+/* 三个盒子都是一样的所以制作同样大盒子类 */
+.category .boxContainer
+{
+  display: flex;
+  justify-content: space-evenly;
+}
+.category .box img
+{
+
+
+    height: 20rem;
+    width: 20rem;
+    border-radius: 50%;  box-shadow: 1px 2px 6px 3px grey;
+    /* 阴影 */
+    
+}
+.category .boxContainer .box
+{
+  text-align: center;
+  flex: 1;
+
+}
+.category .box h3
+{
+  font-size: 2rem;
+  background: linear-gradient(to right, #2545fc, #0de3eb, #100a2e, #eedd44);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  /* 不会！！！！！ */
+}
+
+.category .boxContainer .box p{
+  font-size: 1.5rem;
+  color: #10221b;
+  padding: 1rem 0;
+  line-height: 2;
+}
+.category .boxContainer .box
+{
+  height: 40rem;
+  position: relative;
+  text-align: center;
+
+
+}
+
+.category .boxContainer .box .btn
+{
+  position: absolute;
+  bottom: 0;
+  right: 33%;
+  
+}
+.packages
+{
+  background: #eee
+}
+.packages .boxs-container
+{
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.packages .boxs-container .box
+{
+  width: 32rem;
+  height: 90rem;
+  margin-bottom: 2rem;
+  transition: .3s;
+  text-align: center;
+  border: 2px solid #000;
+  border-radius: 0.8rem;
+  padding: 2rem;
+  margin-right: 2rem;
+  background-color: white;
+
+
+
+}
+
+.packages .boxs-container .box:nth-child(4n)
+{
+  margin-right: 0;
+}
+.packages .boxs-container .box:hover
+{
+  background: #10221b;
+  color: white;
+
+}
+.packages .boxs-container .box .img
+{
+ 
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 25rem;
+
+  
+}
+.packages .boxs-container .box .img img
+{
+  width: 100%;
+  height: 100%;
+
+}
+.packages .boxs-container .box h3
+{
+    margin-top: 2rem;
+     font-size: 2rem;
+}
+.packages .boxs-container .box p
+{
+  font-size: 1.5rem;
+  margin-top: 2rem;
+}
+.packages .boxs-container .box i
+{
+  display: block;
+  font-size: 2rem; 
+  margin-top: 1.5rem;
+}
+.packages .boxs-container .box .btn
+{
+  cursor: pointer;
+  background-color: white;
+}
+.packages .boxs-container .box:hover .btn
+{
+  color: white;
+  background-color: black;
+}
+.packages .boxs-container .box .btn:hover
+{
+  background-color: white;
+  color: black;
+}
+
+.contact .wrapper
+{
+      display: flex;
+      width: 55rem;
+      height: 45rem;
+      margin: 0 auto;
+      flex-direction: column;
+    
+      box-shadow: 0 0 10px rgb(0 0 0 / 60%);
+    
+
+    
+     
+}
+
+.contact .wrapper i
+{
+  display: block;
+  margin-top: 3rem;
+  font-size: 3.5rem;
+  font-weight: 700;
+  align-self: center;
+
+  
+}
+.contact .wrapper .input-field
+{
+  flex: 1;
+    height: 29rem;
+    padding: 4.5rem;
+
+  
+}
+.contact .wrapper input
+{
+  font-size: 2rem;
+  padding-bottom:1.5rem ;
+  border-bottom: 2px solid #5f66618f;
+  margin-bottom: 1.5rem;
+
+}
+.contact .wrapper .content
+{
+  display: flex;
+  flex-direction: row;
+}
+.contact .wrapper .message 
+{
+  padding-top:5rem ;
+  flex: 1;
+}
+.footer
+{
+    height: 42rem;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/footer.jpg) no-repeat;
+    background-position: 0% 60% ;
+    /* background-size: cover;
+    background-position: center; */
+    /* 也可以这样！！！ */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+.footer .wrapper
+{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+.footer .boxs-container
+{
+    display: flex;
+    flex: 1;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+.footer .boxs-container h3
+{
+
+  font-size: 2.5rem;
+
+}
+.footer .boxs-container a
+{
+  display: block;
+  color: white;
+  margin-top: 1.5rem;  
+  font-size:1.4rem ;
+
+}
+.footer .boxs-container .box
+{
+  flex: 1;
+  justify-content: flex-start;
+}
+.footer .wrapper .end
+{
+  flex: 1;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+
+
+}
+
+.footer .wrapper .end span
+{
+  
+  color: #219150;
+
+}
+.footer .boxs-container .box a:hover
+{
+  color: #219150;
+
+}
+.footer .boxs-container .box a i
+{
+  padding-right:0.5rem ;
+}
+.footer .boxs-container .box a:hover i
+{
+    padding-right:2rem ;
+}
