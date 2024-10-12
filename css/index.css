@@ -404,3 +404,80 @@ section
 {
     padding-right:2rem ;
 }
+
+
+
+.header #menu-btn
+{
+  display: none;
+}
+.icons
+{
+  font-size: 20px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+
+.search-form {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(83, 79, 79, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transform: translateY(-100%);
+  transition: 1s;
+}
+
+.active {
+  transform: translateY(0%);
+ 
+}
+
+#close-search {
+  position: absolute;
+  top: 1.5rem;
+  right: 2.5rem;
+  cursor: pointer;
+  color: white;
+  font-size: 5rem;
+}
+#close-search:hover {
+  color: green;
+}
+
+form {
+  width: 90vw;
+  margin: 0 2rem;
+  padding-bottom: 3rem;
+  border-bottom: 0.2rem solid white;
+  display: flex;
+  align-items: center;
+
+}
+form input {
+  width: 100%;
+  font-size: 2rem;
+  color: white;
+  text-transform: none;
+  background: none;
+  padding-right: 2rem;
+}
+
+form input::placeholder {
+  color: #aaa;
+}
+
+form label {
+  font-size: 3rem;
+  cursor: pointer;
+  color: white;
+}
+form label:hover {
+  color: green;
+}

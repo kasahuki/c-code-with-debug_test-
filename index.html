@@ -38,6 +38,16 @@
   <!-- 以上为导航栏区域 -->
 
 
+  <div class="search-form">
+    <div id="close-search" class="fas fa-times"></div>
+    <form action="">
+    <input type="search" name="" placeholder="search here..." id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    </form>
+</div>
+
+
+
   <!-- 划定区域 -->
   <section class="home" id="home">
 
@@ -252,7 +262,8 @@
 
 
   <!-- js 逻辑 -->
-  <script>
+  <script >
+    
     let hd=document.querySelector('.header')
     window.addEventListener('scroll',function(){
       if(document.documentElement.scrollTop>0)
@@ -265,7 +276,7 @@
     }
     })
   </script>
-
+  <script src="./js/index.js"></script>
 
 
 
